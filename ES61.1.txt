@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+
+<title> ES6 1 </title>
+
+</head>
+
+<body>
+//1
+
+<script>
+var Person = (name) => this.name = name;
+
+Person.prototype.prefixName = (arr) => {
+
+return arr.map(function (character) {
+
+ return this.name + character;
+
+ }, this);
+
+};
+
+
+
+//2
+
+let obj = { first: 'Anuja', last: 'Shelke', DOB: '7/9/1991' };
+
+console.log( `Name is ${obj.first} ${obj.last} and DOB is ${obj.DOB}` );
+
+
+//3
+
+
+var foo = ['one', 'two', 'three'];
+
+var [one, two, three]=foo;
+
+console.log(one);
+
+
+//4
+
+function foodme() { 
+
+var x =  1;
+
+var food = "Cheese"
+
+if(x==1)
+{
+
+let food = "Meow Mix"; 
+
+}
+console.log(food);
+}
+
+foodme();
+
+</script>
+
+</body>
+
+</html>
